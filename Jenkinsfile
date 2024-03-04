@@ -4,11 +4,7 @@ pipeline {
             label 'AGENT-1'
         }
     }
-    options {
-        ansiColor('xterm')
-        // timeout(time: 1, unit: 'HOURS')
-        // disableConcurrentBuilds()
-    }
+    
     parameters {
         choice(name: 'action', choices: ['apply', 'destroy'], description: 'Pick something')
     }
